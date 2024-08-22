@@ -127,8 +127,14 @@
 //     soma: (num1, num2) => num1 + num2,
 //     subtracao: (num1, num2) => num1 - num2,
 //     multiplicacao: (num1, num2) => num1 * num2,
-//     divisao: (num1, num2) => num1 / num2 ? num1 / num2 : console.log('Erro: Divisão por zero!'),
-//     calcularMedia: function() { return [...arguments].reduce((sum, nr) => sum + nr, 0)}
+//     divisao: (num1, num2) => num2 !== 0 ? num1 / num2 : console.log('Erro: Divisão por zero!'),
+//     calcularMedia: function() { return [...arguments].reduce((sum, nr) => sum + nr, 0)},
+
+        // RESPOSTA:
+        // calcularMedia: function(numeros) {
+        //     const soma = numeros.reduce((total, numero) => total + numero, 0);
+        //     return soma / numeros.length;
+        // }
 // }
 
 // const soma = calculadora.soma(2, 2);
@@ -156,41 +162,38 @@
 // Crie um objeto chamado cliente que representa um cliente com uma conta bancária. O objeto deve ter as seguintes propriedades:
 // nome: uma string representando o nome do cliente.
 // conta: uma referência à conta bancária associada a esse cliente (objeto criado anteriormente).
-
-
 // Crie uma função chamada mostrarSaldo que aceita o objeto cliente como parâmetro
 // e imprime no console o nome do cliente
 // e o saldo da sua conta utilizando this para acessar as propriedades do objeto.
-
 // Realize operações de depósito e saque na conta bancária do cliente usando as funções do objeto contaBancaria e,
 // em seguida, chame a função para exibir as informações atualizadas no console.
 
-const contaBancaria = {
-    titular: '',
-    saldo: 1000,
-    depositar: function(valor) { return this.saldo += valor},
-    sacar: function(valor) { return this.saldo >= valor ? this.saldo -= valor : console.log('Saldo insuficiente')}
-}
-const cliente = {
-    nome: 'Luisa',
-    conta: contaBancaria,
-}
+// const contaBancaria = {
+//     titular: '',
+//     saldo: 1000,
+//     depositar: function(valor) { return this.saldo += valor},
+//     sacar: function(valor) { return this.saldo >= valor ? this.saldo -= valor : console.log('Saldo insuficiente')}
+// }
+// const cliente = {
+//     nome: 'Luisa',
+//     conta: contaBancaria,
+// }
 
-function mostrarSaldo(cliente){
-    console.log(`\ncliente ${cliente.nome},\no saldo da sua conta é: R$${contaBancaria.saldo}`)
-}
+// function mostrarSaldo(cliente){
+//     console.log(`\ncliente ${cliente.nome},\no saldo da sua conta é: R$${contaBancaria.saldo}`)
+// }
 
-mostrarSaldo(cliente)
+// mostrarSaldo(cliente)
 
-const deposito = contaBancaria.depositar(500)
+// const deposito = contaBancaria.depositar(500)
 
-console.log('\nSaldo atualizado: ')
-mostrarSaldo(cliente)
+// console.log('\nSaldo atualizado: ')
+// mostrarSaldo(cliente)
 
-const sacar = contaBancaria.sacar(200)
+// const sacar = contaBancaria.sacar(200)
 
-console.log('\nSaldo atualizado: ')
-mostrarSaldo(cliente)
+// console.log('\nSaldo atualizado: ')
+// mostrarSaldo(cliente)
 
 
 
